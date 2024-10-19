@@ -99,7 +99,6 @@ def filter_male_with_lastname_F():
     time_after_optimization = end_time_after - start_time_after
 
     print(f"Query time after optimization: {time_after_optimization:.4f} seconds")
-
     print(f"{'Full Name':<30} {'Birth Date':<12} {'Gender':<8} {'Age'}")
     print("=" * 60)
 

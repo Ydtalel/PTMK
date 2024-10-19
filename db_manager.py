@@ -53,15 +53,5 @@ class EmployeeDatabase:
         ''')
         self.conn.commit()
 
-    def create_fullname_index(self):
-        self.cursor.execute('''
-               CREATE INDEX IF NOT EXISTS idx_fullname ON employees (full_name)
-           ''')
-        self.conn.commit()
-
-    def run_analyze(self):
-        self.cursor.execute('ANALYZE')
-        self.conn.commit()
-
     def close(self):
         self.conn.close()
