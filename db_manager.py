@@ -33,7 +33,7 @@ class EmployeeDatabase:
 
     def get_all_employees(self):
         self.cursor.execute('''
-            SELECT full_name, birth_date, gender FROM employees ORDER BY full_name
+            SELECT DISTINCT full_name, birth_date, gender FROM employees ORDER BY full_name
         ''')
         return self.cursor.fetchall()
 
